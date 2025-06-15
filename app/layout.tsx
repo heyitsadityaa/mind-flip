@@ -19,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body
+        suppressContentEditableWarning
+        className={`${inter.className} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

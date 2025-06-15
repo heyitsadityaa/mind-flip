@@ -246,9 +246,9 @@ class MemoryGameClass extends Component<{}, GameState> {
     const currentCategory = cardCategories[selectedCategory];
     return (
       <div
-        className={`min-h-screen bg-gradient-to-br ${currentCategory.color} p-2 sm:p-4 overflow-hidden`}
+        className={`min-h-screen bg-gradient-to-br ${currentCategory.color} p-2 sm:p-4`}
       >
-        <div className="max-w-4xl mx-auto h-screen flex flex-col">
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white mb-3 sm:mb-6">
             Memory Game (Class Component)
           </h1>
@@ -342,8 +342,8 @@ class MemoryGameClass extends Component<{}, GameState> {
           )}{" "}
           {/* Game Board */}
           {(gameStarted || showingPreview) && (
-            <div className="flex-1 flex items-center justify-center">
-              <div className="grid grid-cols-4 gap-1 sm:gap-2 w-full max-w-md sm:max-w-lg lg:max-w-2xl">
+            <div className="mb-6">
+              <div className="grid grid-cols-4 gap-1 sm:gap-2 max-w-md sm:max-w-lg lg:max-w-2xl mx-auto">
                 {cards.map((card) => (
                   <div
                     key={card.id}

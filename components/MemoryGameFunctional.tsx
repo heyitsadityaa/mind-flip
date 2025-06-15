@@ -178,14 +178,14 @@ const MemoryGameFunctional: React.FC = () => {
   const currentCategory = cardCategories[selectedCategory];
   return (
     <div
-      className={`min-h-screen bg-gradient-to-br ${currentCategory.color} p-2 sm:p-4 overflow-hidden`}
+      className={`min-h-screen bg-gradient-to-br ${currentCategory.color} p-2 sm:p-4`}
     >
-      <div className="max-w-4xl mx-auto h-screen flex flex-col">
+      <div className="max-w-4xl mx-auto">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white mb-3 sm:mb-6">
           Memory Game (Functional Component)
         </h1>{" "}
         {/* Category Selector */}
-        <div className="bg-white rounded-lg shadow-lg p-3 sm:p-4 mb-3 sm:mb-6 flex-shrink-0">
+        <div className="bg-white rounded-lg shadow-lg p-3 sm:p-4 mb-3 sm:mb-6">
           <h3 className="text-sm sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 text-center">
             Choose Category
           </h3>
@@ -215,7 +215,7 @@ const MemoryGameFunctional: React.FC = () => {
           </div>
         </div>{" "}
         {/* Game Stats */}
-        <div className="bg-white rounded-lg shadow-lg p-3 sm:p-4 mb-3 sm:mb-6 flex-shrink-0">
+        <div className="bg-white rounded-lg shadow-lg p-3 sm:p-4 mb-3 sm:mb-6">
           <div className="grid grid-cols-4 gap-2 sm:gap-4 text-center">
             <div>
               <span className="text-xs sm:text-sm text-gray-600">Lives</span>
@@ -245,8 +245,8 @@ const MemoryGameFunctional: React.FC = () => {
         </div>{" "}
         {/* Start Game Screen */}
         {!gameStarted && !showingPreview && (
-          <div className="flex-1 flex items-center justify-center">
-            <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 text-center max-w-md">
+          <div className="text-center mb-6">
+            <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 max-w-md mx-auto">
               <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800">
                 Ready to Start?
               </h2>
@@ -278,8 +278,8 @@ const MemoryGameFunctional: React.FC = () => {
         )}{" "}
         {/* Game Board */}
         {(gameStarted || showingPreview) && (
-          <div className="flex-1 flex items-center justify-center">
-            <div className="grid grid-cols-4 gap-1 sm:gap-2 w-full max-w-md sm:max-w-lg lg:max-w-2xl">
+          <div className="mb-6">
+            <div className="grid grid-cols-4 gap-1 sm:gap-2 max-w-md sm:max-w-lg lg:max-w-2xl mx-auto">
               {cards.map((card) => (
                 <div
                   key={card.id}
